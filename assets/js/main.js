@@ -186,5 +186,10 @@
 
 				}
 			});
+	//audio
+			let arr = document.querySelectorAll("audio");
+			arr.forEach(element => {
+				element.volume = 0.5;
+			});
 
 })(jQuery);
