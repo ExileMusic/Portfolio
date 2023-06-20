@@ -14,25 +14,25 @@
 	</head>
 	<body class="is-preload">
 		<template id = "song-spotlight">
-			<section  class="wrapper style2 spotlights">
+			<section  class="wrapper style2 spotlights" style="border: 5px solid rgb(20,20,20,0.1);">
 
 			<section>
-				<a  class="image fit"><img id = "song-image" class = "spotlights-images" src="images/Initium-cover.png"  data-position="center center" /></a>
+				<a  class="image fit"><img id = "song-image" class = "spotlights-images" src="images/Initium-cover.png" data-position="center center" /></a>
 				<div class="content">
 					<div class="inner">
 						<h2 id = "song-name">Initium</h2>
-						<h3 id = "album">single</h3>
+						<h3 id = "album-type">Album type</h3>
 						<div >
 							
 								<a  id = "spotify-link" href = "" target="_blank"class = "button primary icon solid "><img   style = "width: auto; height: 100%;" src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2017/png/iconmonstr-spotify-5.png&r=0&g=0&b=0" ></a>
 								<a  id = "soundcloud-link" href = "" target = "_blank"class = "button primary icon solid "><img   style = "width:auto; height: 100%;" src="https://cdns.iconmonstr.com/wp-content/releases/preview/2012/240/iconmonstr-soundcloud-5.png" ></a>
 								<a  id = "youtube-link" href = "https://www.youtube.com/watch?v=m9_f1ohCO2I" target ="_blank" class = "button primary icon solid "><img   style = "width:auto; height: 100%;" src="https://cdns.iconmonstr.com/wp-content/releases/preview/2013/240/iconmonstr-youtube-10.png" ></a>
-								<a  id = "deezer-link" href = "https://deezer.page.link/P7cGLRGxXWT4JhzY8" target ="_blank" class = "button primary icon solid "><img   style = "width:auto; height: 100%;" src="https://cdn-icons-png.flaticon.com/512/49/49383.png?w=826&t=st=1687124708~exp=1687125308~hmac=a6344c7f1609a5296125708268eeb5c5c9d87f3215bf4c2aff05e53850da47e8" ></a>
-								<a  id = "apple-link" href = "https://music.apple.com/nl/album/initium-single/1692135671" target ="_blank" class = "button primary icon solid "><img   style = "width:auto; height: 100%;" src="https://cdns.iconmonstr.com/wp-content/releases/preview/2013/240/iconmonstr-apple-os-5.png" ></a>
+								<a  id = "deezer-link" href = "https://deezer.page.link/wkJKJcFg7Lqo7kgS8" target ="_blank" class = "button primary icon solid "><img   style = "width:auto; height: 100%;" src="https://cdn-icons-png.flaticon.com/512/49/49383.png?w=826&t=st=1687124708~exp=1687125308~hmac=a6344c7f1609a5296125708268eeb5c5c9d87f3215bf4c2aff05e53850da47e8" ></a>
+								<a  id = "apple-link" href = "https://music.apple.com/us/artist/exile/1692092186" target ="_blank" class = "button primary icon solid "><img   style = "width:auto; height: 100%;" src="https://cdns.iconmonstr.com/wp-content/releases/preview/2013/240/iconmonstr-apple-os-5.png" ></a>
 
 						</div>
-						<audio controls>
-							<source id = "sound-file" src="Music/initium.wav" type="audio/wav">
+						<audio controls controlsList="nodownload">
+							<source id = "sound-file" src="" type="audio/wav">
 						  Your browser does not support the audio element.
 						  </audio>
 						<ul>
@@ -47,11 +47,12 @@
 		</template>
 		<!-- Header -->
 			<header id="header">
+				<img src = "images/Exile_music-transformed.jpeg" style="width: 75px;border-radius: 50%;">
 				<a href="index.html" class="title">Exile Music</a>
 				<nav>
 					<ul>
 						<li><a href="index.html">Home</a></li>
-						<li><a href="Song Gallery.html" class="active">Gallery</a></li>
+						<li><a href="Song Gallery.html" class="active">Tracks</a></li>
 						<!-- <li><a href="elements.html">Elements</a></li> -->
 					</ul>
 				</nav>
@@ -62,37 +63,7 @@
 				<h1>My Released Tracks</h1>
 				<!-- Main -->
 
-				<!-- <section id="two" class="wrapper style2 spotlights">
-
-					<h1>My Released Tracks</h1>
-					<section>
-						<a  class="image fit"><img class = "spotlights-images" src="images/Initium-cover.png"  data-position="center center" /></a>
-						<div class="content">
-							<div class="inner">
-								<h2>Initium</h2>
-								<div >
-									
-										<a  href = "https://open.spotify.com/track/5O3Yn9x0OvrLr1V7aP2LZp?si=acbea12176bf42fb" target="_blank"class = "button primary icon solid "><img   style = "width: auto; height: 100%;" src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2017/png/iconmonstr-spotify-5.png&r=0&g=0&b=0" ></a>
-										<a href = "https://soundcloud.com/exile_m/initium?si=3f4dfd7e9e1c483f9f4e763986a22625&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target = "_blank"class = "button primary icon solid "><img   style = "width:auto; height: 100%;" src="https://cdns.iconmonstr.com/wp-content/releases/preview/2012/240/iconmonstr-soundcloud-5.png" ></a>
-										<a href = "https://www.youtube.com/watch?v=m9_f1ohCO2I" target ="_blank" class = "button primary icon solid "><img   style = "width:auto; height: 100%;" src="https://cdns.iconmonstr.com/wp-content/releases/preview/2013/240/iconmonstr-youtube-10.png" ></a>
-										<a href = "https://deezer.page.link/P7cGLRGxXWT4JhzY8" target ="_blank" class = "button primary icon solid "><img   style = "width:auto; height: 100%;" src="https://cdn-icons-png.flaticon.com/512/49/49383.png?w=826&t=st=1687124708~exp=1687125308~hmac=a6344c7f1609a5296125708268eeb5c5c9d87f3215bf4c2aff05e53850da47e8" ></a>
-										<a href = "https://music.apple.com/nl/album/initium-single/1692135671" target ="_blank" class = "button primary icon solid "><img   style = "width:auto; height: 100%;" src="https://cdns.iconmonstr.com/wp-content/releases/preview/2013/240/iconmonstr-apple-os-5.png" ></a>
-
-								</div>
-								<audio controls>
-									<source src="Music/initium.wav" type="audio/wav">
-								  Your browser does not support the audio element.
-								  </audio>
-								<ul>
-									<li>Released: June 2023</li>
-									<li>Artists: Exile</li>
-									<li>Genre: Liquid Dnb/Breakcore</li>
-								</ul>
-							</div>
-						</div>
-					</section>
-					
-				</section> -->
+				
 				</div>
 
 		<!-- Footer -->
@@ -113,6 +84,15 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src = "spotify.js" type="module"></script>
+			<script src = "youtube.js" type="module"></script>
+			<script>document.addEventListener('play', function(e){  
+				var audios = document.getElementsByTagName('audio');  
+				for(var i = 0, len = audios.length; i < len;i++){  
+					if(audios[i] != e.target){  
+						audios[i].pause();  
+					}  
+				}  
+			}, true);</script>
 			<!-- <script src = "songdata.json" type ="text/javascript"></script> -->
 			<script type ="module" src = "gallery.js">
 			</script>
