@@ -3910,4 +3910,6 @@ input, select, textarea {
 
 		}
 
-		
+		audio{
+			width: 100%;
+		}
