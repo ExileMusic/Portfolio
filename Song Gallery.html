@@ -21,6 +21,7 @@
 				<div class="content">
 					<div class="inner">
 						<h2 id = "song-name">Initium</h2>
+						<h3 id = "album">single</h3>
 						<div >
 							
 								<a  id = "spotify-link" href = "" target="_blank"class = "button primary icon solid "><img   style = "width: auto; height: 100%;" src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2017/png/iconmonstr-spotify-5.png&r=0&g=0&b=0" ></a>
@@ -111,27 +112,9 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src = "spotify.js"></script>
-			<script>
-				let wrapper = document.querySelector("#wrapper")
-				//load song data per song
-				let template = document.getElementById("song-spotlight");
-				let clone = template.content.cloneNode(true);
-				let songName = "Initium";
-				let image = clone.getElementById("song-image");
-				let name = clone.getElementById("song-name");
-				let spotifyIcon = clone.getElementById("spotify-link");
-				let soundcloudIcon = clone.getElementById("soundcloud-link");
-				let youtubeIcon = clone.getElementById("spotify-link");
-				let deezerIcon = clone.getElementById("spotify-link");
-				let appleIcon = clone.getElementById("spotify-link");
-				let spotifyLink = "https://spotify.com/track/";
-				let soundcloudLink ="http://soundcloud.com/exile_m/"+songName;
-				name.textContent = songName;
-				image.setAttribute("src","images/"+songName+"-cover.png");
-
-				soundcloudIcon.setAttribute("href",soundcloudLink);
-				wrapper.appendChild(clone);
+			<script src = "spotify.js" type="module"></script>
+			<script src = "songdata.json" type ="text/javascript"></script>
+			<script type ="module" src = "gallery.js">
 			</script>
 
 	</body>

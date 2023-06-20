@@ -1,11 +1,9 @@
 {
-    "song1":{
-        "name":"Initium",
-        "artists":["Exile"],
-        "release-date":"02-06-2023",
-        "genres":["Liquid DnB","Breakcore"]
-
-
+    "Just Shut Up":{
+        "genres":["Breakcore"]
+    },
+    "Initium":{
+        "genres":["Liquid Dnb","Breakcore"]
     }
 
 
