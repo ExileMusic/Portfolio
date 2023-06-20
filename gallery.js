@@ -1,4 +1,4 @@
-import {getApiKeyAndRun,getArtistData} from "/spotify.js"
+import {getApiKeyAndRun,getArtistData} from "./spotify.js"
                
                     
 				const songs = JSON.parse(getArtistData(getApiKeyAndRun()))["items"];
