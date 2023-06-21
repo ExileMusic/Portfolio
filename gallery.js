@@ -131,7 +131,7 @@ async function displaySocialTracks(){
                              
                             let genres=JSON.parse(getPlayList(songs[i]["snippet"]["playlistId"]))["items"][0]["snippet"]["title"]
                              genre.textContent = "Genres: "+genres;
-                             image.setAttribute("style","width: 100%px;overflow:hidden;aspect-ratio: 1 / 1;")
+                             image.setAttribute("style","width: 428px;height: 428px;overflow:hidden")
                              wrapper.appendChild(clone);
                              streamingTrackNames.push(songName.toLowerCase());
                          
