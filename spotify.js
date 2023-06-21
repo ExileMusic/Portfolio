@@ -8,7 +8,6 @@
 }
  function getArtistData(access_token){
     let token = JSON.parse( access_token)["access_token"];
-    console.log(access_token[0]);
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open( "GET", "https://api.spotify.com/v1/artists/0LjcLn4U7ZBWHliLkrQBJz/albums", false ); // false for synchronous request
     xmlHttp.setRequestHeader("Authorization","Bearer  "+token);
