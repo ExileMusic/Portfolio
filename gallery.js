@@ -69,7 +69,7 @@ let streamingTrackNames=[];
                         
                         return new Promise((res)=>{
                             setTimeout(()=>{
-                            res();} , 500);});
+                            res();} , 100);});
                     }
 async function displaySocialTracks(){
 
