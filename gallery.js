@@ -69,7 +69,7 @@ let streamingTrackNames=[];
                         
                         return new Promise((res)=>{
                             setTimeout(()=>{
-                            res();} , 100);});
+                            res();} , 500);});
                     }
 async function displaySocialTracks(){
 
@@ -118,7 +118,7 @@ async function displaySocialTracks(){
                             appleIcon.remove();
                             soundcloudIcon.setAttribute("href",soundcloudLink.replaceAll(" ","-"));
                             youtubeIcon.setAttribute("href",youtubeLink);
-                            audio.setAttribute("src","Music/"+songName.replaceAll(" ","%20").toLowerCase()+".wav");
+                            audio.setAttribute("src","Music/"+songName.replaceAll(" ","-").toLowerCase()+".wav");
                             //albumType.textContent = type;
                             // let text =""
                             // for(let i = 0;i<artists.length;i++){
@@ -131,14 +131,14 @@ async function displaySocialTracks(){
                              
                             let genres=JSON.parse(getPlayList(songs[i]["snippet"]["playlistId"]))["items"][0]["snippet"]["title"]
                              genre.textContent = "Genres: "+genres;
-                             image.setAttribute("style",image.getAttribute("style")+"width: 428px;height: 428px;overflow:hidden")
+                             image.setAttribute("style",image.getAttribute("style")+"width: 100%;height100%;aspect-ratio: 1/1;overflow:hidden")
                              wrapper.appendChild(clone);
                              streamingTrackNames.push(songName.toLowerCase());
                          
                             
                            
                         }
-                        setTimeout(setAudio,100)
+                        setTimeout(setAudio,500)
 }
 				
 				//"images/"+songName+"-cover.png"
