@@ -15,7 +15,6 @@ let streamingTrackNames=[];
                             let clone = template.content.cloneNode(true);
                             let songName = songs[i]["name"];
                             if(streamingTrackNames.includes(songName.toLowerCase())){
-                                console.log("Already added")
                                 continue;
                             }
                             let artistsElement = clone.getElementById("artists"); 
@@ -76,17 +75,14 @@ async function displaySocialTracks(){
                         const songs = JSON.parse(getPlaylistData())["items"];
                         
                         let songCount = songs.length;
-                        console.log(songs.length)
                         let wrapper = document.querySelector("#wrapper")
                         //load song data per song
                         let template = document.getElementById("song-spotlight");
                         for(let i = 0 ; i <songCount;i++){
                             let clone = template.content.cloneNode(true);
                             let songName = songs[i]["snippet"]["title"].split("|")[1].trim();
-                            console.log(JSON.parse(getPlayList(songs[i]["snippet"]["playlistId"])))
                             if(streamingTrackNames.includes(songName.toLowerCase())){
-                                console.log("Already added")
-                                console.log(songs[i])
+                                
                                 continue;
                             }
                             let artistsElement = clone.getElementById("artists"); 
@@ -111,7 +107,6 @@ async function displaySocialTracks(){
                            }
                             let soundcloudLink ="http://soundcloud.com/exile_m/"+songName;
                             name.textContent = songName;
-                            console.log(songs[i])
                             image.setAttribute("src",songs[i]["snippet"]["thumbnails"]["high"]["url"]);
                             spotifyIcon.remove();
                             deezerIcon.remove();
@@ -150,7 +145,6 @@ async function displaySocialTracks(){
 
 
  displaySocialTracks()
- console.log(streamingTrackNames)
 
 function setAudio(){
     let arr = document.querySelectorAll("audio");
