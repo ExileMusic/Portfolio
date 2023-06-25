@@ -42,7 +42,7 @@ let streamingTrackNames=[];
                             spotifyIcon.setAttribute("href",spotifyLink);
                             soundcloudIcon.setAttribute("href",soundcloudLink.replaceAll(" ","-"));
                             youtubeIcon.setAttribute("href",youtubeLink);
-                            audio.setAttribute("src","Music/"+songName.replaceAll(" ","%20").toLowerCase()+".wav");
+                            audio.setAttribute("src","Music/"+songName.replaceAll(" ","-").toLowerCase()+".wav");
                             albumType.textContent = type;
                             let text =""
                             for(let i = 0;i<artists.length;i++){
