@@ -11,7 +11,7 @@ let streamingTrackNames=[];
                         let wrapper = document.querySelector("#wrapper")
                         //load song data per song
                         let template = document.getElementById("song-spotlight");
-                        for(let i = 0 ; i <songCount;i++){
+                        for(let i = songCount ; i >0;i--){
                             let clone = template.content.cloneNode(true);
                             let songName = songs[i]["name"];
                             if(streamingTrackNames.includes(songName.toLowerCase())){
