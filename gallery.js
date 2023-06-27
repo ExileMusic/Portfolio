@@ -11,7 +11,7 @@ let streamingTrackNames=[];
                         let wrapper = document.querySelector("#wrapper")
                         //load song data per song
                         let template = document.getElementById("song-spotlight");
-                        for(let i = songCount ; i <songCount;i++){
+                        for(let i = 0 ; i <songCount;i++){
                             let clone = template.content.cloneNode(true);
                             let songName = songs[i]["name"];
                             if(streamingTrackNames.includes(songName.toLowerCase())){
@@ -78,7 +78,7 @@ async function displaySocialTracks(){
                         let wrapper = document.querySelector("#wrapper")
                         //load song data per song
                         let template = document.getElementById("song-spotlight");
-                        for(let i = songCount-1 ; i >0;i--){
+                        for(let i = songCount-1 ; i >=0;i--){
                             let clone = template.content.cloneNode(true);
                             let songName = songs[i]["snippet"]["title"].split("|")[1].trim();
                             if(streamingTrackNames.includes(songName.toLowerCase())){
