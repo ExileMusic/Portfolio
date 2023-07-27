@@ -1,18 +1,27 @@
 import {getApiKeyAndRun,getArtistData} from "./spotify.js";
 
 import {getPlaylistData,getPlayList} from "./youtube.js";
-let streamingTrackNames=[];            
+import { getSongList } from "./soundcloud.js";
+let streamingTrackNames=[];    
  function displayStreamingTracks(){
      streamingTrackNames=[];  
                         const songs = JSON.parse(getArtistData(getApiKeyAndRun()))["items"];
-                        const youtubeSongs = JSON.parse(getPlaylistData())["items"];
+                        let youtubeSongs = JSON.parse(getPlaylistData())["items"];
+                        console.log(youtubeSongs);
+                        
+                           
+                        
                         let songCount = songs.length;
                         
                         let wrapper = document.querySelector("#wrapper")
                         //load song data per song
                         let template = document.getElementById("song-spotlight");
+                        
                         for(let i = 0 ; i <songCount;i++){
                             let clone = template.content.cloneNode(true);
+                            console.log(clone);
+                            let embed = clone.querySelector("#spotify-embed");
+                            console.log(template)
                             let songName = songs[i]["name"];
                             if(streamingTrackNames.includes(songName.toLowerCase())){
                                 continue;
@@ -30,19 +39,23 @@ let streamingTrackNames=[];
                             let soundcloudIcon = clone.getElementById("soundcloud-link");
                             let youtubeIcon = clone.getElementById("youtube-link");
                             let spotifyLink = songs[i]["external_urls"]["spotify"];
-                            let youtubeLink = ""
-                           for (let i = 0; i < youtubeSongs.length; i++) {
-                             if(youtubeSongs[i]["snippet"]["title"].toLowerCase().includes(songName.toLowerCase())){
-                                youtubeLink="https://www.youtube.com/watch?v="+youtubeSongs[i]["snippet"]["resourceId"]["videoId"]
-                             }
-                           }
+                            let youtubeLink = "";
+                            if(youtubeSongs!=null){
+                                for (let i = 0; i < youtubeSongs.length; i++) {
+                                    if(youtubeSongs[i]["snippet"]["title"].toLowerCase().includes(songName.toLowerCase())){
+                                       youtubeLink="https://www.youtube.com/watch?v="+youtubeSongs[i]["snippet"]["resourceId"]["videoId"]
+                                    }
+                                  }
+                            }
+                           
                             let soundcloudLink ="http://soundcloud.com/exile_m/"+songName;
                             name.textContent = songName;
                             image.setAttribute("src",songs[i]["images"][0]["url"]);
                             spotifyIcon.setAttribute("href",spotifyLink);
                             soundcloudIcon.setAttribute("href",soundcloudLink.replaceAll(" ","-"));
                             youtubeIcon.setAttribute("href",youtubeLink);
-                            audio.setAttribute("src","Music/"+songName.replaceAll(" ","-").toLowerCase()+".wav");
+                            embed.setAttribute("src","https://open.spotify.com/embed/album/"+songs[i]["id"]+ "?utm_source=generator")
+                            clone.querySelector("audio").style.display ="none";
                             albumType.textContent = type;
                             let text =""
                             for(let i = 0;i<artists.length;i++){
@@ -55,8 +68,9 @@ let streamingTrackNames=[];
                              
                             let genres=JSON.parse(getPlayList(youtubeSongs[i]["snippet"]["playlistId"]))["items"][0]["snippet"]["title"]
                              
-                             genre.textContent = "Genres: "+genres;
+                            genre.textContent = "Genres: "+genres;
                              wrapper.appendChild(clone);
+                             
                              streamingTrackNames.push(songName.toLowerCase());
                              
                              
